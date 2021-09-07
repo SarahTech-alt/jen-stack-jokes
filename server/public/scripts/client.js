@@ -5,6 +5,7 @@ $( document ).ready( onReady );
 function onReady() {
     console.log('DOM ready');
     getTheJokes();
+    
 }
 
 // Append the jokes to the DOM on page load
@@ -27,3 +28,20 @@ function getTheJokes(){
 function errorMessage(){
     alert('There was an error getting jokes')
 }
+
+// Make a POST function to send new jokes to the server
+    function addJoke() {
+        $.ajax({
+        method: 'POST',
+        url: '/showJokes',
+        data: {
+            whoseJoke: $('#whoseJokeIn').val(),
+            jokeQuestion: $('#questionIn').val(),
+            punchLine: $('#punchlineIn').val()
+        }
+        }).then(getTheJokes).catch(postError);
+    }
+
+    function postError() {
+        alert('There was an error in adding a new joke');
+    }
