@@ -1,5 +1,14 @@
 ## Node Express jQuery Code Challenge
 
+# Checklist
+- [ ] Make a GET request on page load to get jokes from the server
+- [ ] Append response to the DOM using a loop
+- [ ] Make 'Add Joke' button click handler
+- [ ] Create an object with 'whoseJoke',
+    'jokeQuestion', and 'punchLine' attributes retrieved from user inputs 
+- [ ] Create a POST function to send the inputted values to the server on 'add joke' button click
+- [ ] Create a GET function to retrieve the new joke, clear the current jokes on the DOM and append the array again to include the new joke
+
 ### Objectives
 - Send requests to the server from client using an AJAX request(s),
 - Display response on the DOM,
