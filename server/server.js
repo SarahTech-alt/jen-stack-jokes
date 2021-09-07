@@ -1,4 +1,4 @@
-const express = require( 'express' );
+const express = require('express');
 const app = express();
 const PORT = 5000;
 
@@ -32,6 +32,12 @@ let jokes = [
     punchLine: "It was a shih tzu."
   }
 ];
+
+// Send jokes to the client getTheJokes function to append to DOM
+app.get('/showJokes', (req, res) => {
+  console.log('in server showJokes');
+  res.send(jokes);
+})
 
 // serve back static files
 app.use(express.static('server/public'));

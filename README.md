@@ -1,8 +1,8 @@
 ## Node Express jQuery Code Challenge
 
 # Checklist
-- [ ] Make a GET request on page load to get jokes from the server
-- [ ] Append response to the DOM using a loop
+- [x] Make a GET request on page load to get jokes from the server
+- [x] Append response to the DOM using a loop
 - [ ] Make 'Add Joke' button click handler
 - [ ] Create an object with 'whoseJoke',
     'jokeQuestion', and 'punchLine' attributes retrieved from user inputs 
