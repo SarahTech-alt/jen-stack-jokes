@@ -40,7 +40,7 @@ app.get('/showJokes', (req, res) => {
 })
 
 app.post('/showJokes', (req, res) => {
-  jokes.push(data);
+  jokes.push(req.body);
   res.send('success');
 })
 

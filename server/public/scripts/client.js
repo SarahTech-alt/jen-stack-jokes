@@ -5,7 +5,7 @@ $( document ).ready( onReady );
 function onReady() {
     console.log('DOM ready');
     getTheJokes();
-    
+    $('#addJokeButton').on('click',addJoke);
 }
 
 // Append the jokes to the DOM on page load
@@ -14,6 +14,8 @@ function getTheJokes(){
         method: 'GET',
         url: '/showJokes'
     }).then(function (response) {
+        // clear the joke list on the DOM before adding
+        $('#jokesGoHere').empty();
         for (const jokes of response) {
             console.log(jokes);
             // Access each property of response
